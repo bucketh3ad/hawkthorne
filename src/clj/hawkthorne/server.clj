@@ -1,6 +1,6 @@
-(ns doublejump.server
+(ns hawkthorne.server
   (:require [clojure.java.io :as io]
-            [doublejump.dev :refer [is-dev? inject-devmode-html browser-repl start-figwheel]]
+            [hawkthorne.dev :refer [is-dev? inject-devmode-html browser-repl start-figwheel]]
             [compojure.core :refer [GET defroutes]]
             [compojure.route :refer [resources]]
             [compojure.handler :refer [api]]

@@ -1,8 +1,6 @@
-(defproject doublejump "0.8.0"
-  :description "Phaser.IO Clojurescript example"
-  :url "https://github.com/kstrempel/doublejump"
-  :license {:name "Eclipse Public License"
-            :url "http://www.eclipse.org/legal/epl-v10.html"}
+(defproject hawkthorne "0.0.1"
+  :description "Clojure/ClojureScript port of Journey to the Center of Hawkthorne"
+  :url "https://github.com/niamu/hawkthorne"
 
   :source-paths ["src/clj" "src/cljs"]
 
@@ -23,7 +21,7 @@
 
   :min-lein-version "2.5.0"
 
-  :uberjar-name "doublejump.jar"
+  :uberjar-name "hawkthorne.jar"
 
   :cljsbuild {:builds {:app {:source-paths ["src/cljs"]
                              :compiler {:output-to     "resources/public/js/app.js"
@@ -32,7 +30,7 @@
                                         :optimizations :none
                                         :pretty-print  true}}}}
 
-  :profiles {:dev {:repl-options {:init-ns doublejump.server
+  :profiles {:dev {:repl-options {:init-ns hawkthorne.server
                                   :nrepl-middleware [cemerick.piggieback/wrap-cljs-repl]}
                    :plugins [[lein-figwheel "0.1.4-SNAPSHOT"]]
                    :figwheel {:http-server-root "public"

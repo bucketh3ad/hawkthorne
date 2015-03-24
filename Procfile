@@ -1,1 +1,1 @@
-web: java $JVM_OPTS -cp target/doublejump.jar clojure.main -m doublejump.server
+web: java $JVM_OPTS -cp target/hawkthorne.jar clojure.main -m hawkthorne.server
