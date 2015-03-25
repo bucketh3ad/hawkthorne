@@ -9,9 +9,8 @@
             ;the first parameter is the tileset name as specified in Tiled, the second is the key to the asset
             (.. this -map (addTilesetImage "greendale-interior" "greendale-interior"))
 
-            (set! (.. this -background) (.. this -map (createLayer "background")))
-            (set! (.. this -accents) (.. this -map (createLayer "accents")))
-            (set! (.. this -floor) (.. this -map (createLayer "floor")))
+            (doseq [x ["background" "accents" "floor"]]
+              (aset this x (.. this -map (createLayer x))))
 
             (.. this -map (setCollisionBetween 15 15 true "floor"))
 
