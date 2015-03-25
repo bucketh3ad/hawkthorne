@@ -55,6 +55,9 @@
                                           (clj->js {:font "16px Arial"
                                                     :fill "#ffffff"})))
 
+            ;Prevent aliasing when scaling
+            (.setImageRenderingCrisp js/Phaser.Canvas (.. game -canvas))
+
             (set! (.. this -fpsText -fixedToCamera) true))
 
     (preload [this]
